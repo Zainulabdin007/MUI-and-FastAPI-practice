@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+# MUI Practice – React + FastAPI Weight Converter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a full-stack web app that uses **React with Material UI** on the frontend and **FastAPI** on the backend. It lets users:
 
-## Available Scripts
+- Input their name and age
+- View a summary card
+- Convert weight between **kilograms and pounds**
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Frontend:**
+- React
+- Material UI (MUI)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Backend:**
+- FastAPI
+- Python
+- Uvicorn (ASGI server)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📂 Project Structure
 
-### `npm run build`
+mui-practice/
+├── backend/
+│ ├── main.py # FastAPI backend logic
+│ └── venv/ # Python virtual environment (should be gitignored)
+├── public/
+├── src/
+│ ├── App.js # Main React component
+│ └── index.js # Entry point
+├── package.json
+├── README.md
+└── ... other files
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+yaml
+Copy
+Edit
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🧪 Features
 
-### `npm run eject`
+- ✅ Material UI AppBar and Tabs
+- ✅ Snackbar and Alert for form feedback
+- ✅ Summary card for user input
+- ✅ Real-time weight conversion (kg ↔ lbs) using FastAPI
+- ✅ Clean, beginner-friendly React layout
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🧰 Setup Instructions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 1. Clone the Repository
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+git clone https://github.com/your-username/mui-practice.git
+cd mui-practice
+2. Install Frontend Dependencies
+bash
+Copy
+Edit
+npm install
+3. Start the React Frontend
+bash
+Copy
+Edit
+npm start
+4. Set Up the Backend
+bash
+Copy
+Edit
+cd backend
+python -m venv venv               # Create virtual environment (optional but recommended)
+venv\Scripts\activate             # Activate on Windows
+# source venv/bin/activate        # Use this line instead on macOS/Linux
 
-## Learn More
+pip install fastapi uvicorn
+5. Start the Backend Server
+bash
+Copy
+Edit
+uvicorn main:app --reload
+The FastAPI server will be running on:
+📡 http://127.0.0.1:8000
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🌐 API Endpoints
+POST /convert-to-lbs
+Request:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+json
+Copy
+Edit
+{ "weight": 70 }
+Response:
 
-### Code Splitting
+json
+Copy
+Edit
+{ "pounds": 154.32 }
+POST /convert-to-kg
+Request:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+json
+Copy
+Edit
+{ "weight": 154 }
+Response:
 
-### Analyzing the Bundle Size
+json
+Copy
+Edit
+{ "kilograms": 69.85 }
+✍️ Author
+Made with ❤️ by Zainulabdin Bughio
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+📜 License
+MIT – free to use, modify, and share. Credit appreciated.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+yaml
+Copy
+Edit
